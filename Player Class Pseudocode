@@ -1,0 +1,126 @@
+BEGIN PlayerC
+
+INITIALIZATION
+Snail
+    DECLARE image snail_image_2 and snail_image_2
+    SET snail_frames to snail_image_2 and snail_image_2
+    SET snail_frame_index to 1
+
+    Fly
+    DECLARE image fly_image_1 and fly_image_2
+    SET fly_frames to fly_image_1 and fly_image_2
+    SET fly_frame_index to 0
+    // SET fly_surf
+
+    Timer - Used to trigger obstacles at certain invervals
+    SET obstacle_timer to trigger obstacle spawn continuously 
+        Triggr obstacle time every 900 miliseconds
+    SET snail_animation_timer to 500 
+    SET fly_animation_timer to 200
+
+END INITIALIZATION
+
+    DEFINE obstacle_movement in obstacle_list
+        IF obstacle_list THEN
+            FOR every obstacle rectangle in obstacle_list THEN
+            obstacle rectange moves along X-axis by -5 pixels per cycle of game loop
+        
+        DISPLAY snail_surf and obstaclle_rect
+
+
+GAME LOOP
+        WHEN game is active
+        IF event is obstacle_timer THEN
+            everytime timer triggers a new obstacle is added to the list
+            obstacle in that list is moving to the left every frame 
+            rectangles too far left get
+
+
+
+
+
+INITIALIZATION OF VARIABLES
+    SET screen to 800 by 400 pixels
+    PRINT Runner
+    SET start time to 0
+    SET score to 0
+    LOOP Game Music
+
+    Groups
+    SET player rectangle
+    SET obstacle Groups
+
+    DECLARE image sky surface, ground surface
+
+    Snail
+    DECLARE image snail_image_2 and snail_image_2
+    SET snail_frames to snail_image_2 and snail_image_2
+    SET snail_frame_index to 1
+
+    Fly
+    DECLARE image fly_image_1 and fly_image_2
+    SET fly_frames to fly_image_1 and fly_image_2
+    SET fly_frame_index to 0
+    // SET fly_surf
+
+    Player
+    DECLARE image player_walk_1 and player_walk_2 and player_jump
+    SET player_walk to player_walk_1 and player_walk_2
+    SET player_index to 0
+
+    SET player_surf to player_walk of player_index
+    SET rectangle of player_surf above ground to the left at 80 by 300 pixels
+    SET player_gravity to 0
+
+    Intro screen
+    DECLARE image player_stand
+    //SET player_stand to 32-bit surface (rotozoom)
+    SET player_stand rectangle to center at 400 by 80 pixels
+
+    SET game_message to 'Space Runner' 
+    SET game_message rectangle to center at 400 and 330 pixels
+
+    Timer - Used to trigger obstacles at certain invervals
+    SET obstacle_timer to trigger obstacle spawn continuously 
+        Triggr obstacle time every 900 miliseconds
+    SET snail_animation_timer to 500 
+    SET fly_animation_timer to 200
+
+
+
+    WHILE TRUE
+        for events in game
+            IF quit
+             game exits
+          ENDIF
+
+        WHEN game is active
+          IF spacebar pressed and player is at 300 _____ THEN
+            player Y-Postion decreases to -20 ____
+        
+   // ELSE
+ 
+            
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+procedure 
+
+procedure player_input
+    FOR keys = Spacebar;
+        IF keys and character bottom is larger or equal to 300 THEN
+            character gravity is 0;
+            and jump sound is played;
+        ENDIF
+
